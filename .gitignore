@@ -80,3 +80,6 @@ cpp/Brewfile.lock.json
 
 # docker volumes used for caching
 .docker
+cpp/debug
+cpp/release
+javac*.args
