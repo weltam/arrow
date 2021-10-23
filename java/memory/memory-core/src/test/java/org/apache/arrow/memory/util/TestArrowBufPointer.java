@@ -120,18 +120,19 @@ public class TestArrowBufPointer {
       ArrowBufPointer pointer = new ArrowBufPointer(hasher);
 
       pointer.set(buf, 0, 4);
-      pointer.hashCode();
+      var hash = pointer.hashCode();
 
       // hash code computed
       assertEquals(1, hasher.counter);
 
       // no hash code re-compute
-      pointer.hashCode();
+      hash = pointer.hashCode();
       assertEquals(1, hasher.counter);
 
       // hash code re-computed
       pointer.set(buf, 4, 4);
-      pointer.hashCode();
+      var temp = pointer.hashCode();
+
       assertEquals(2, hasher.counter);
     }
   }
