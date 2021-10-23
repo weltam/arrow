@@ -56,9 +56,7 @@ ninja unittest
 
 # build java
 
-```sh
 
-```
 
 ```xml
             <compilerArgs>
@@ -78,8 +76,23 @@ ninja unittest
             </compilerArgs>
 ```
 
+we need to force compile with mvn clean compile to generate immutable config
+
+https://immutables.github.io/getstarted.html
+
+```sh
+mvn clean compile install
+```
+
+include c++ arrow libs
+
+```sh
+cd java
+mvn install -P arrow-jni -am -Darrow.cpp.build.dir=../cpp/release/
+```
+
 # TODO
 
 - [ ] how to scan the pom dependencies to get the latest version of the libraries. i see that it's possible in gradle
 - [ ] currently temporarily disable rat-check? why this is breaking? 
-- [ ] 
+- [ ] need to double check the compilerArgs vs argLine in properties? remove uncessary one
