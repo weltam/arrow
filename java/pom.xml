@@ -40,7 +40,7 @@
     <dep.avro.version>1.10.0</dep.avro.version>
     <arrow.vector.classifier />
     <forkCount>2</forkCount>
-    <checkstyle.failOnViolation>false</checkstyle.failOnViolation>
+    <checkstyle.failOnViolation>true</checkstyle.failOnViolation>
     <errorprone.javac.version>9+181-r4173-1</errorprone.javac.version>
     <argLine>
       --add-modules java.base 
@@ -343,7 +343,7 @@
             <id>analyze</id>
             <phase>verify</phase>
             <goals>
-              <goal>analyze-only</goal>
+              <!-- <goal>analyze-only</goal> -->
             </goals>
             <configuration>
               <ignoreNonCompile>true</ignoreNonCompile>

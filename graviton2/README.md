@@ -95,4 +95,5 @@ mvn install -P arrow-jni -am -Darrow.cpp.build.dir=../cpp/release/
 
 - [ ] how to scan the pom dependencies to get the latest version of the libraries. i see that it's possible in gradle
 - [ ] currently temporarily disable rat-check? why this is breaking? 
+- [ ] currently disabling analyze-only from maven dependencies.. error asm9. https://issues.apache.org/jira/browse/MDEP-774
 - [ ] need to double check the compilerArgs vs argLine in properties? remove uncessary one
