@@ -97,3 +97,4 @@ mvn install -P arrow-jni -am -Darrow.cpp.build.dir=../cpp/release/
 - [ ] currently temporarily disable rat-check? why this is breaking? 
 - [ ] currently disabling analyze-only from maven dependencies.. error asm9. https://issues.apache.org/jira/browse/MDEP-774
 - [ ] need to double check the compilerArgs vs argLine in properties? remove uncessary one
+- [ ] learn how to setup immutable in idea jetbrains https://immutables.github.io/apt.html
