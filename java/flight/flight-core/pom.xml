@@ -173,7 +173,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-shade-plugin</artifactId>
-        <version>3.1.1</version>
+        <version>3.3.0-SNAPSHOT</version>
         <executions>
           <execution>
             <id>shade-main</id>
@@ -294,7 +294,7 @@
             <id>analyze</id>
             <phase>verify</phase>
             <goals>
-              <goal>analyze-only</goal>
+              <!-- <goal>analyze-only</goal> -->
             </goals>
             <configuration>
               <ignoredDependencies combine.children="append">
@@ -389,4 +389,21 @@
       </dependencies>
     </profile>
   </profiles>
+  <pluginRepositories>
+    <pluginRepository>
+      <id>apache</id>
+      <name>apache</name>
+      <url>https://repo.maven.apache.org/maven2/</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </pluginRepository>
+    <pluginRepository>
+      <id>maven-snapshots</id>
+      <url>https://repository.apache.org/content/repositories/snapshots/</url>
+    </pluginRepository>
+  </pluginRepositories>
 </project>
