@@ -110,6 +110,9 @@ public class DefaultAllocationManagerOption {
       return (AllocationManager.Factory) field.get(null);
     } catch (Exception e) {
       throw new RuntimeException("Unable to instantiate Allocation Manager for " + clazzName, e);
+    } catch (Throwable e) {
+      e.printStackTrace();
+      throw e;
     }
   }
 
