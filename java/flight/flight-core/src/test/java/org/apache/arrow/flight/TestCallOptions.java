@@ -104,7 +104,8 @@ public class TestCallOptions {
         FlightServer s =
             FlightTestUtil.getStartedServer((location) -> FlightServer.builder(a, location, producer).build());
         FlightClient client = FlightClient.builder(a, s.getLocation()).build()) {
-      client.doAction(new Action(""), new HeaderCallOption(headers)).hasNext();
+      // FIXME need to log this one maybe? the checkstyle is kind of strict on this ReturnValueIgnored    
+      var hasNext = client.doAction(new Action(""), new HeaderCallOption(headers)).hasNext();
 
       final CallHeaders incomingHeaders = producer.headers();
       for (String key : headers.keys()) {
